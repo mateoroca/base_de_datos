@@ -6,7 +6,7 @@
 void AttendanceManagement::takeAttendance(Student*student,Course*course,string datetime ,bool state)
 {
     ofstream file ;
-    file.open("attendance.csv");
+    file.open("attendance.csv", ios::app);
     
     if(file.is_open())
     
