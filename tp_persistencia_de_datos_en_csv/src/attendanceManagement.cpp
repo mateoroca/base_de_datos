@@ -17,8 +17,7 @@ void AttendanceManagement::takeAttendance(Student*student,Course*course,string d
          << course->getName()       << ","
          << course->getIdentifier() << ","
          << datetime                << ","
-         << state                   << ","
-         << endl;
+         << state                   << endl;
 
          file.close();
      }
