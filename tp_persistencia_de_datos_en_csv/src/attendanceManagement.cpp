@@ -31,7 +31,7 @@ void AttendanceManagement::takeAttendance(Student*student,Course*course,string d
 void AttendanceManagement::showAttendance()
 {
     ifstream file;
-    string data;
+    string row;
 
     file.open("attendance.csv");
     
@@ -39,9 +39,9 @@ void AttendanceManagement::showAttendance()
     {
         while(!file.eof())
         {
-        getline(file,data);
+        getline(file,row);
 
-        cout << data << endl;
+        cout << row << endl;
         }
         file.close();
         
