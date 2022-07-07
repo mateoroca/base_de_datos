@@ -1,0 +1,58 @@
+  // inner join 
+
+
+SELECT
+users.name,
+games.name
+FROM
+users
+INNER JOIN game_user ON users.id = game_user.ID_users
+INNER JOIN games ON game_user.ID_games = games.id
+
+/////////////////////////////////////////////////////////////////////
+LEFT JOIN 
+
+
+
+SELECT
+users.name,
+games.name
+FROM
+users
+LEFT JOIN game_user ON users.ID = game_user.ID_users
+LEFT JOIN games ON game_user.ID_games = games.ID
+
+//////////////////////////////////////////////////////////////////////
+RIGHT JOIN
+
+
+SELECT
+users.name,
+games.name
+FROM
+users
+RIGHT JOIN game_user ON users.ID = game_user.ID_users
+RIGHT JOIN games ON game_user.ID_games = games.ID
+
+/////////////////////////////////////////////////////////////////////
+
+UNION 
+
+SELECT
+users.name,
+games.name
+FROM
+users
+LEFT JOIN game_user ON users.ID = game_user.ID_users
+LEFT JOIN games ON game_user.ID_games = games.ID
+
+UNION 
+
+SELECT
+users.name,
+games.name
+FROM
+users
+RIGHT JOIN game_user ON users.ID = game_user.ID_users
+RIGHT JOIN games ON game_user.ID_games = games.ID
+
